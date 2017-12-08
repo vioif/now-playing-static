@@ -1,6 +1,7 @@
 /* BASE styles */
 
 html {
+  font-size: 10px; /* 10px / 16px = 0.625 */
   box-sizing: border-box;
   font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 100%;
@@ -20,7 +21,7 @@ body {
     We need to add some padding to the bottom of the body on mobile so that
      the footer won't get covered by our navigation
   */
-  padding-bottom: 60px;
+  padding-bottom: 80px;
 }
 
 /*
@@ -46,22 +47,29 @@ figure {
 
 
 /* NAVIGATION styles */
+h1 {
+  color: black;
+  font-weight: bold;
+  text-align: center;
+  display: inline-block;
+}
+
 .site-logo {
-  position: fixed;
   top: 1rem;
   left: 1rem;
   width: 80px;
   height: 80px;
   margin: 0;
-  z-index: 100;
+  display: inline-block;
+  float: left;
 }
 
 .site-nav {
   position: fixed;
   bottom: 0;
+  top: 0;
   left: 0;
-  right: 0;
-  width: 100%;
+  width: 7%;
   z-index: 100;
   background-color: #ffffff;
 }
@@ -103,6 +111,9 @@ figure {
 /* MOVIE styles */
 .movie {
   position: relative;
+  margin: 1em;
+
+
 }
 
 .movie-poster,
@@ -142,6 +153,22 @@ figure {
   Hide the overview on mobile devices
   TIP: Use media queries to reveal it on larger devices
 */
+
+/* MEDIA QUIERES */
+@media ( min-width: 768px ) {
+
+.movie {
+		width: 94%;
+		margin: 0px auto;
+    float: left;
+    width: 46%;
+	}
+
+.movie-image {
+
+  		font-size: 1.5rem; /* 15px / 10px = 1.5 OR 1.5rem */
+  	}
+
 .movie-overview {
   display: none;
 }
